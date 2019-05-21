@@ -9,6 +9,7 @@ import { DataService } from '../data.service';
 export class SymptomComponent implements OnInit {
 
   symptoms: Object;
+  symptomtypes: Object;
 
   constructor(private data: DataService) { }
 
@@ -16,6 +17,11 @@ export class SymptomComponent implements OnInit {
     this.data.getSymptom().subscribe(data => {
       this.symptoms = data
       console.log(this.symptoms);
+    }
+    );
+    this.data.getSymptomType().subscribe(data => {
+      this.symptomtypes = data
+      console.log(this.symptomtypes);
     }
     );
   }
