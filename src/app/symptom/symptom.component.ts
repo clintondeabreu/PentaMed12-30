@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
+import { Pipe, PipeTransform } from '@angular/core';
 
 @Component({
   selector: 'app-symptom',
@@ -7,7 +8,6 @@ import { DataService } from '../data.service';
   styleUrls: ['./symptom.component.scss']
 })
 export class SymptomComponent implements OnInit {
-
   symptoms: Object;
   symptomtypes: Object;
 
@@ -25,5 +25,4 @@ export class SymptomComponent implements OnInit {
     }
     );
   }
-
 }

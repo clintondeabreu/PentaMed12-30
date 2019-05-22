@@ -1,14 +1,26 @@
 <app-main-nav></app-main-nav>
 <h1>Symptoms</h1>
 <h2> {{symptomtypes[0].Description}}</h2>
-<li *ngFor="let symptom of symptoms">
-    <p *ngIf="(symptom.SymptomTypeID == 1)"> {{symptom.Description}}</p>
-</li>
+<ng-container *ngFor="let symptom of symptoms">
+	<ul>
+		<li *ngIf="symptom.SymptomTypeID === 1">
+			<p> {{symptom.Description}}</p>
+		</li>
+	</ul>
+</ng-container>
 <h2> {{symptomtypes[1].Description}}</h2>
-<li *ngFor="let symptom of symptoms">
-    <p *ngIf="(symptom.SymptomTypeID == 2)"> {{symptom.Description}}</p>
-</li>
+<ng-container *ngFor="let symptom of symptoms">
+	<ul>
+		<li *ngIf="symptom.SymptomTypeID === 2">
+			<p> {{symptom.Description}}</p>
+		</li>
+	</ul>
+</ng-container>
 <h2> {{symptomtypes[2].Description}}</h2>
-<li *ngFor="let symptom of symptoms">
-    <p *ngIf="(symptom.SymptomTypeID == 3)"> {{symptom.Description}}</p>
-</li>
+<ng-container *ngFor="let symptom of symptoms">
+	<ul>
+		<li *ngIf="symptom.SymptomTypeID === 3">
+			<p> {{symptom.Description}}</p>
+		</li>
+	</ul>
+</ng-container>
